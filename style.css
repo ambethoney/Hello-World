@@ -1,0 +1,103 @@
+h1{
+	position:fixed;
+	text-align:center;
+	font-family:'Droid Serif';
+	font-size:55px;
+	left:500px;
+	top:300px;
+	z-index:-1;
+	color:#bc6146;
+}
+h2{
+	position:fixed;
+	text-align:center;
+	font-family:'Droid Serif';
+	font-size:35px;
+	left:400px;
+	top:375px;	
+	z-index:-1;
+	color:#bc6146;
+}
+p{
+	font-size:18px;
+	font-family:'Droid Serif';
+
+}
+.image-shown{
+	display:inline-block;
+}
+.image-hidden{
+	display: none;
+}
+.carousel-inner{
+	position:fixed;
+	top:5px;
+	right:10px;
+	left:135px;
+	z-index:-2;
+}
+.carousel-inner img{
+	height:600px;
+	width:1100px;
+	
+}	
+.previous{
+	float:left;
+	top:255;
+	left:150px;
+	color:black;
+	text-decoration:none;
+	font-size:70px;
+}
+.next{
+	float:right;
+	top:255px;
+	right:150px;
+	color:black;
+	text-decoration:none;
+	font-size:70px;
+}
+.about{
+	background-color:gainsboro;
+	position:relative;
+	top:600px;
+	left:127px;
+	width:1100px;
+	height:1000px;
+	z-index:-1;
+}
+#hello{
+	font-size:60px;
+	padding:50px 480px 15px;
+	color:tomato;
+}
+#about_pic{
+	position:relative;
+	height:300px;
+	width:260px;
+	padding:0 425px 35px;
+}
+.text{
+	position:relative;
+	width:800px;
+	padding:0 350px 70px 275px;
+	text-align:justify;
+	top:150px;
+}
+#contact{
+	position:absolute;
+	top:1500px;
+	right:177px;
+	font-family: 'Droid Serif';
+	color:#bc6146;
+	}
+.contact-icon{
+	position:absolute;
+	top:1520px;
+	right:150px;
+	color:#bc6146;
+	height:17px;
+	}
+body{
+	background-color:LavenderBlush;
+}
