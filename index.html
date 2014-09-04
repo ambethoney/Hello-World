@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+	<title>Angelina Marie | Web Design & Development</title>
+	<link href="style.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+	 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		
+	<script>
+	$(document).ready(function(){
+
+	$(".next").on("click", function(e){
+
+		var currentActiveImage = $(".image-shown");
+		var nextActiveImage = currentActiveImage.next();
+
+		if(nextActiveImage.length == 0)
+		{
+			nextActiveImage = $(".carousel-inner a").first();
+		}
+
+		currentActiveImage.removeClass("image-shown").addClass("image-hidden").css("z-index", -10);
+		nextActiveImage.addClass("image-shown").removeClass("image-hidden").css("z-index", 20);
+		$(".carousel-inner a").not([currentActiveImage, nextActiveImage]).css("z-index", 1);
+
+		e.preventDefault();
+	});
+
+	$(".previous").on("click", function(e){
+
+		var currentActiveImage = $(".image-shown");
+		var nextActiveImage = currentActiveImage.prev();
+
+		if(nextActiveImage.length == 0)
+		{
+			nextActiveImage = $(".carousel-inner a").last();
+		}
+
+		currentActiveImage.removeClass("image-shown").addClass("image-hidden").css("z-index",-10);
+		nextActiveImage.addClass("image-shown").removeClass("image-hidden").css("z-index", 20);
+		$(".carousel-inner a").not([currentActiveImage, nextActiveImage]).css("z-index",1);
+
+
+		e.preventDefault();
+	})
+
+});
+	</script>
+</head>
+<body>
+<div class="carousel-outer">
+	<h1>Angelina Marie</h1>
+	<h2>Aspiring Web Developer & Designer</h2>
+	<a class="previous" href="#"> < </a>
+	<div class="carousel-inner">
+	  <img  class="image-shown" src="http://oi57.tinypic.com/2mfywpe.jpg">
+	  <img class="image-hidden"src="http://33.media.tumblr.com/78624123599fc7fcb256840736f6987b/tumblr_n4vbdf0dgm1st5lhmo1_1280.jpg">
+	  <img class="image-hidden" src="http://33.media.tumblr.com/3afad829ce330a66b3bbb98831c1c393/tumblr_mx3tpto69r1st5lhmo1_1280.jpg">
+	</div>
+	<a class="next" href="#"> > </a>
+</div>
+	 	<div class="about">
+	 		<h3 id="hello"><em>hello!</em></h3>
+	 		<img src="http://oi57.tinypic.com/1zxkuis.jpg" alt"Angelina Picture" id="about_pic"/>
+	 	</div>
+	 		<div class="text">
+		<p>My name is Angelina Bethoney. I have a passion for designing and developing beautiful, unique experiences for clients. I like to think of a company's web page as an extension of their home. You wouldn't want your potential clients to see a messy, outdated home, would you?
+			<br>
+			<br>
+			<br> I have always had an eye for simple and pleasing design, and it is my passion to bring that to the internet. It's exciting to think projects I helped work on can solve problems for people all around the world. I'm looking forward to tackling the fast-paced, ever changing world of technology.</p>
+		</div>
+		<div class="email">
+			<a href="mailto:ambethoney@yahoo.com"> <img src="http://i61.tinypic.com/25ro0nd_th.jpg" alt="contact me" class="contact-icon"/></a>
+		<p id="contact">Contact me here.</p>
+	
+		</div>
+		</div>
+
+</body>
+</html>
